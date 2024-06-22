@@ -1,0 +1,898 @@
+/*Importing Font*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/*Base Styling*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Rubik, Arial, Helvetica, sans-serif;
+    background: black;
+    color: white;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #ccc;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* Showcase */
+
+.showcase {
+
+    width: 100%;
+    height: 530px;
+    background: url(img/header.jpg) no-repeat center center / cover;
+
+
+}
+
+.showcase::after {
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    z-index: 1;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.76) 15.54%,
+            rgba(0, 0, 0, 0.192) 60.23%,
+            rgba(0, 0, 0, 8e-5) 100%);
+}
+
+.showcase nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 2rem;
+}
+
+.showcase nav .login-btn {
+
+    text-transform: uppercase;
+    /* font-size: normal; */
+    border: none;
+    letter-spacing: 1px;
+    background: none;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+}
+
+.showcase nav .login-btn:hover {
+    opacity: 0.8;
+    background-color: #323843;
+    color: #fff;
+    border-radius: 10px;
+    /* transition: background-color 0.4s ease-in-out, color 1.5s; */
+    /* transition: color 0.2s ease-in-out; */
+}
+
+
+/* Showcase Content */
+
+.showcase-content {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 60px;
+}
+
+.logo {
+    width: 200px;
+    margin: 20px 0px;
+
+}
+
+.showcase-content h2 {
+
+    font-size: 16px;
+}
+
+.showcase-content p {
+
+    font-size: 16px;
+    padding: 20px;
+
+}
+
+.small {
+    padding: 10px;
+    font-size: xx-small;
+}
+
+
+h4 {
+    color: rgb(28, 231, 131);
+    font-size: xx-small;
+    text-transform: uppercase;
+}
+
+
+/* Buttons / Utilities */
+
+.btn {
+
+    display: inline-block;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    font-size: 13px;
+
+}
+
+.btn-login {
+    background-color: black;
+    color: white;
+
+}
+
+.btn-start:hover {
+    opacity: 0.8;
+
+}
+
+/* Showcase Section */
+.showcase-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 40px;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 30px 40px;
+
+    background: linear-gradient(318.68deg,
+            #0f495c 0%,
+            #0d3640 49.72%,
+            #08141f 100%);
+
+}
+
+.showcase-section p {
+    font-size: 25px;
+}
+
+.showcase-section h4 {
+    color: rgb(28, 231, 131);
+}
+
+.showcase-section a {
+
+    text-decoration: underline;
+    color: lightgrey;
+    font-size: small;
+}
+
+.showcase-section .end-section {
+
+
+    align-self: end;
+    justify-self: end;
+    text-align: center;
+
+    /* Alternate Lengthy Method
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7px;
+    margin-left: 100px; */
+
+}
+
+.showcase-section .btn-section {
+
+    display: block;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-section:hover {
+    opacity: 0.8;
+}
+
+.section-link {
+    display: inline-block;
+    margin-top: 3px;
+}
+
+/* Showcase-division*/
+
+.division-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+h1 {
+
+    font-size: 60px;
+    padding: 20px;
+}
+
+.division-content p {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.categories {
+
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 0px;
+    margin-bottom: 30px;
+
+}
+
+.showcase-division .categories>div {
+
+    position: relative;
+    height: 500px;
+    width: 300px;
+
+}
+
+.showcase-division .grading {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(156.82deg,
+            rgba(0, 0, 0, 0.6) 4.58%,
+            rgba(0, 0, 0, 0) 69.61%),
+        linear-gradient(24.5deg, rgba(0, 0, 0, 0.2) 4.71%, rgba(0, 0, 0, 0) 71.49%);
+}
+
+.text-1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+}
+
+.text-2 {
+    position: absolute;
+    font-size: 25px;
+    top: 50px;
+    left: 20px;
+
+}
+
+.categories .cat-1 {
+
+    border-radius: 10px;
+    background: url(img/cover-1.jpg) no-repeat center center / cover;
+    transition: filter 0.1s ease;
+}
+
+
+.categories .cat-2 {
+
+    border-radius: 10px;
+    background: url(img/cover-2.jpg) no-repeat center center / cover;
+    transition: filter 0.1s ease;
+}
+
+.categories .cat-3 {
+
+    border-radius: 10px;
+    background: url(img/cover-3.jpg) no-repeat center center / cover;
+    transition: filter 0.1s ease;
+}
+
+.categories .cat-4 {
+
+    border-radius: 10px;
+    background: url(img/cover-4.jpg) no-repeat center center / cover;
+    transition: filter 0.1s ease;
+}
+
+/*Additional transition-filter property explored ( */
+
+
+.cat-1:hover {
+
+    border: 5px solid lightgrey;
+    border-radius: 10px;
+    filter: brightness(80%);
+}
+
+.cat-2:hover {
+
+    border: 5px solid lightgrey;
+    border-radius: 10px;
+    filter: brightness(80%);
+}
+
+.cat-3:hover {
+
+    border: 5px solid lightgrey;
+    border-radius: 10px;
+    filter: brightness(80%);
+}
+
+.cat-4:hover {
+    border: 5px solid lightgrey;
+    border-radius: 10px;
+    filter: brightness(80%);
+}
+
+
+/* Live Section */
+
+.live {
+    background-color: #151516;
+    padding: 30px;
+}
+
+.live .border {
+
+
+    border: 3px solid #1ce783;
+    border-radius: 16px;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* .live .border a {
+
+    text-transform: uppercase;
+    text-decoration: underline;
+
+} */
+
+.live .small {
+    margin: 20px 0;
+}
+
+.link {
+    text-decoration: underline;
+}
+
+.live .big-link {
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+/* Sports Section */
+
+.sports {
+
+    background: url('img/live-sports.jpg') no-repeat center center / cover;
+    height: 800px;
+    position: relative;
+}
+
+.showcase-sports {
+
+    position: absolute;
+    top: 160px;
+    left: 100px;
+    max-width: 550px;
+}
+
+.showcase-sports h1 {
+    padding: 0px;
+}
+
+/* .showcase-sports .small a {
+    text-decoration: underline;
+} */
+
+.sports-logos {
+
+    display: flex;
+    width: 300px;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: space-between;
+    /* Adds the remaining space (which is there after applying background to the logos) in-between logos */
+}
+
+.sports-logos>div {
+    display: flex;
+    justify-content: center;
+    background: url(img/network-logo-bg.png) no-repeat center center / cover;
+    height: 60px;
+    width: 60px;
+
+}
+
+.sports-logos img {
+    width: 40px;
+}
+
+.sports .small {
+
+    margin-top: 20px;
+    padding: 0px;
+}
+
+
+/* Footer without Dropdown */
+
+/* .footer {
+
+    background-color: #ebedf2;
+    color: #333;
+    font-size: small;
+
+}
+
+.footer li {
+    margin: 10px 0px;
+}
+
+.footer a {
+    color: #586174;
+}
+
+.foot-wrapper {
+    display: flex;
+    grid-template-columns: 3fr 1fr 1fr;
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px;
+}
+
+.foot-lists {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot-lists .list-head {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+} */
+
+
+
+/*
+.social-media img {
+    width: 20px;
+    height: 20px;
+    margin-right: 25px;
+} */
+
+/* .footer .no-head {
+    margin-top: 28px;
+} */
+
+/* Footer with Dropown */
+
+.footer {
+    background-color: #f5f6f7;
+    padding-left: 20px;
+    text-transform: capitalize;
+    padding-top: 42px;
+    padding-bottom: 30px;
+
+}
+
+/* .foot-section {
+    border-bottom: 1px solid #dcdfe6;
+
+} */
+
+.line-segment {
+    width: 90%;
+    height: 3px;
+    margin: 30px 0;
+    border-top: 1.5px #ccc solid;
+    border-radius: 30px;
+}
+
+.foot-head {
+    padding: 32px 0;
+    cursor: pointer;
+    display: flex;
+
+}
+
+.foot-head .list-head {
+    color: #272C34;
+    flex-grow: 1;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.expand-icon {
+    background-image: url(img/expand-button.png);
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 20px;
+    transform: rotateZ(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.foot-section.is-expanded .expand-icon {
+    transform: rotateZ(180deg);
+}
+
+.section-list {
+    display: none;
+    grid-template-columns: 1fr;
+}
+
+.foot-section.is-expanded .section-list {
+    display: grid;
+}
+
+.section-list .list-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+
+}
+
+.list-column a {
+
+    display: block;
+    color: #656b7b;
+    font-size: 14px;
+    /* padding-right: 2px; */
+    padding-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.social-media img {
+    width: 23px;
+    height: 23px;
+    margin-right: 30px;
+
+}
+
+.social-media {
+    margin-top: 30px;
+}
+
+/* Login Form */
+
+.modal {
+
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+
+}
+
+.modalbox {
+
+    margin: 50px auto;
+    width: 400px;
+    background: white;
+    color: #333;
+    position: relative;
+    border-radius: 26px;
+    border-width: 2px;
+    border-style: solid;
+
+}
+
+.modalbody {
+    padding: 50px;
+
+
+}
+
+.modalbody h3 {
+
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.modalbody .btn-login {
+    width: 100%;
+    border-radius: 26px;
+    border-width: 2px;
+    margin-top: 30px;
+}
+
+.modal .close {
+    cursor: pointer;
+    height: 23px;
+    width: 23px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.modal .modalfoot {
+    background: #f7f7f9;
+    color: #333;
+    padding: 20px 0;
+    border-top: #eee 1px solid;
+    text-align: center;
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    font-size: 15px;
+}
+
+.modal .modalfoot a {
+    color: steelblue;
+    font-size: 15px;
+}
+
+.modalbody a {
+    color: steelblue;
+    font-size: 15px;
+}
+
+.form-control {
+
+    margin: 20px 0;
+}
+
+.form-control label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.form-control input {
+    width: 100%;
+    height: 30px;
+    border-radius: 22px;
+    border-width: 1px;
+
+}
+
+/*Media Queries */
+
+@media(min-width:768px) {
+
+    /* Footer */
+
+    .footer {
+        padding-left: 130px;
+    }
+
+    .expand-icon {
+        display: none;
+    }
+
+    .section-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 0.3fr));
+    }
+
+    .foot-wrapper {
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr;
+    }
+
+    .foot-head {
+        cursor: auto;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    /* Login Forum */
+
+    .modalbox {
+        width: 350px;
+        margin: 100px auto;
+    }
+
+
+    .modalfoot {
+        font-size: 14px;
+    }
+
+    .modalbody a {
+        font-size: 14px;
+    }
+
+    /* Showcase */
+
+    .showcase-content {
+        text-align: center;
+        padding: 0 10px;
+        margin-top: -10px;
+    }
+
+    .showcase-content h4 {
+        margin-top: 90px;
+    }
+
+    .showcase-content h2 {
+        font-size: 13.5px;
+    }
+
+    .showcase-content p {
+        font-size: 13px;
+    }
+
+    .showcase-content .small {
+        font-size: 9px;
+    }
+
+    .showcase-content img {
+        width: 190px;
+    }
+
+    /* Showcase Section */
+
+    .showcase-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+
+    }
+
+    .showcase-section img {
+        width: 230px;
+    }
+
+    .btn-start {
+        font-size: 10px;
+        padding: 10px 20px;
+    }
+
+    .showcase-section .end-section {
+
+        justify-self: center;
+        align-self: center;
+
+    }
+
+    .btn-section {
+        margin-bottom: 10px;
+    }
+
+    /* Showcase Division */
+
+    .showcase-division .categories>div {
+        height: 350px;
+        width: 190px;
+
+    }
+
+    .categories {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .text-2 {
+        position: absolute;
+        font-size: 22px;
+        top: 60px;
+        left: 20px;
+
+    }
+
+
+    .division-content p {
+        margin: 0 20px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        display: block;
+        text-align: center;
+    }
+
+    /* Live Section */
+
+    .live .border {
+        padding: 30px 15px;
+    }
+
+    /* Sports Section */
+
+    .sports {
+        background: url(img/live-sports-small.jpg) no-repeat center center / cover;
+        height: 700px;
+        position: relative;
+
+
+    }
+
+    .showcase-sports {
+        position: absolute;
+        top: 160px;
+        left: 90px;
+        /* margin-right: 30px; */
+        text-align: center;
+    }
+
+
+    .showcase-sports h1 {
+        font-size: 50px;
+        padding-right: 100px;
+    }
+
+    .showcase-sports p {
+        font-size: 13px;
+        padding-right: 90px;
+
+    }
+
+    .showcase-sports .small {
+
+        display: none;
+
+    }
+
+    .sports-logos {
+        display: none;
+
+    }
+
+    /*  Media Query for Footer without Dropdown
+    .foot-lists {
+        flex-direction: column;
+    }
+
+    .list-head {
+        margin-top: 5px;
+    } */
+
+    /* Footer */
+
+    .line-segment {
+        width: 95%;
+    }
+
+
+}
